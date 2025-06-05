@@ -26,7 +26,7 @@ function LoginForm() {
         data
       );
       console.log(response.data.data);
-      //localStorage.setItem("token", response.data.data.token);
+      localStorage.setItem("token", response.data.data.token);
 
       navigate("/list");
     } catch (error) {

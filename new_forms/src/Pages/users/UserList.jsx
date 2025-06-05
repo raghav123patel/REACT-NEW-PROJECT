@@ -9,13 +9,13 @@ function UserList() {
 
     const getUsers = async() => {                       
         try {
-            const token = localStorage.getItem("token");
+           // const token = localStorage.getItem("token");
             const result = await axiosInstance.get(`${API_PATHS.USER_LIST}?pageNumber=${1}&pageSize=1000`, 
-            {
-                 headers: {
-                    Authorization: token,
-                 },
-            }
+            // {
+            //      headers: {
+            //         Authorization: token,
+            //      },
+            // }
             );
             console.log(result);
             userList(result.data.data);
